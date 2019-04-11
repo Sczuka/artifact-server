@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  nexus:
+    image: sonatype/nexus3:3.15.2
+    volumes:
+      - nexus-data:/nexus-data
+
+  nginx:
+    image: nginx:stable-alpine
+    volumes:
+      - "./nginx.conf:/etc/nginx/nginx.conf:ro"
+      - "./server.crt:/etc/ssl/certs/server.crt:ro"
+      - "./server.key:/etc/ssl/certs/server.key:ro"
+    ports:
+      - 443:443
+
+volumes:
+  nexus-data: 
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/srv/nexus3/data'
