@@ -1,6 +1,6 @@
 NEXUS_DATA=/srv/nexus3
 
-sudo mkdir -p $NEXUS_DATA/data/
+sudo mkdir -p $NEXUS_DATA/data/etc/
 
 if [ ! -f $NEXUS_DATA/data/etc/nexus.properties ]; then
    sudo cp nexus.properties $NEXUS_DATA/data/etc/nexus.properties

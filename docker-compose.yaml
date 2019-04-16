@@ -2,9 +2,11 @@ version: "3"
 
 services:
   nexus:
-    image: sonatype/nexus3:3.15.2
+    image: sczuka/sonatype-nexus3-github-oauth:version-3.15.2
     volumes:
       - nexus-data:/nexus-data
+      - "./githuboauth.properties:/opt/sonatype/nexus/etc/githuboauth.properties:ro"
+    restart: unless-stopped
 
   nginx:
     image: nginx:stable-alpine
@@ -14,6 +16,7 @@ services:
       - "./server.key:/etc/ssl/certs/server.key:ro"
     ports:
       - 443:443
+    restart: unless-stopped
 
 volumes:
   nexus-data: 
