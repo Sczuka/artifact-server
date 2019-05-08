@@ -4,7 +4,19 @@
 
 Artifact Server provides a distribution platform for artifacts.
 
-== Repositories
+== Usage
+
+=== Maven
+
+Use ane of the following repositories when consuming maven artifacts:
+
+* maven-private for internal access
+* maven-public for internet access
+
+
+== Setup
+
+=== Repositories
 
 The naming of the repositories should be:
 
@@ -13,13 +25,13 @@ The naming of the repositories should be:
 ${provider-type}-${access}[-${repository-type}][-${deployment-type}]
 -----
 
-=== Maven Repositories
-
+==== Maven Repositories
 
 The following repositories are defined:
 
 * maven-private (group)
 ** maven-public (group)
+*** maven-public-proxy-maven-central (maven central proxy)
 *** maven-public-release-auto (maven release)
 *** maven-public-release-manual (maven release)
 *** maven-public-snapshot-auto (maven snapshot)
