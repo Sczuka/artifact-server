@@ -1,3 +1,34 @@
-# artifact-server
+= artifact-server
+
+== Introduction
 
 Artifact Server provides a distribution platform for artifacts.
+
+== Repositories
+
+The naming of the repositories should be:
+
+[source,text]
+-----
+${provider-type}-${access}[-${repository-type}][-${deployment-type}]
+-----
+
+=== Maven Repositories
+
+
+The following repositories are defined:
+
+* maven-private (group)
+** maven-public (group)
+*** maven-public-release-auto (maven release)
+*** maven-public-release-manual (maven release)
+*** maven-public-snapshot-auto (maven snapshot)
+*** maven-public-snapshot-manual (maven snapshot)
+*** maven-public-feature-auto (maven snapshot)
+*** maven-public-feature-manual (maven snapshot)
+** maven-private-release-auto
+** maven-private-release-manual
+** maven-private-snapshot-auto (maven snapshot)
+** maven-private-snapshot-manual (maven snapshot)
+** maven-private-feature-auto (maven snapshot)
+** maven-private-feature-manual (maven snapshot)
