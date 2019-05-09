@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 NEXUS_DATA=/srv/nexus3
 
 sudo mkdir -p $NEXUS_DATA/data/etc/

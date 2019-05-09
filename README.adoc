@@ -1,4 +1,10 @@
 = artifact-server
+:toc: right
+:toclevels: 5
+:sectnums:
+:sectnumlevels: 5
+:source-highlighter: coderay
+:coderay-linenums-mode: inline
 
 == Introduction
 
@@ -27,10 +33,10 @@ ${provider-type}-${access}[-${repository-type}][-${deployment-type}]
 
 ==== Maven Repositories
 
-The following repositories are defined:
+The following repositories are defined for the *internal server*:
 
-* maven-private (group)
-** maven-public (group)
+. maven-private (group)
+.. maven-public (group)
 *** maven-public-proxy-maven-central (maven central proxy)
 *** maven-public-release-auto (maven release)
 *** maven-public-release-manual (maven release)
@@ -38,9 +44,13 @@ The following repositories are defined:
 *** maven-public-snapshot-manual (maven snapshot)
 *** maven-public-feature-auto (maven snapshot)
 *** maven-public-feature-manual (maven snapshot)
-** maven-private-release-auto
-** maven-private-release-manual
-** maven-private-snapshot-auto (maven snapshot)
-** maven-private-snapshot-manual (maven snapshot)
-** maven-private-feature-auto (maven snapshot)
-** maven-private-feature-manual (maven snapshot)
+.. maven-private-release-auto
+.. maven-private-release-manual
+.. maven-private-snapshot-auto (maven snapshot)
+.. maven-private-snapshot-manual (maven snapshot)
+.. maven-private-feature-auto (maven snapshot)
+.. maven-private-feature-manual (maven snapshot)
+
+The following repositories are defined for the *external server*:
+
+. maven-public (internal server proxy)
